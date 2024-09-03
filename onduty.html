@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On-Duty Request Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #bad49a;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #a4d362;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="time"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #90bb54;
+            color: white;
+            padding: 10px 0;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="submit"]:hover {
+            background-color: #d5dcce;
+        }
+    </style>
+</head>
+<body>
+    <h1>On-Duty Request Form</h1>
+    <div class="form-container">
+        <form action="/submit_od-request" method="post">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="department">Department:</label>
+            <input type="text" id="department" name="department" required>
+            
+            <label for="position">Position:</label>
+            <input type="text" id="position" name="position" required>
+            
+            <label for="manager">Manager/Supervisor Name:</label>
+            <input type="text" id="manager" name="manager" required>
+            
+            <label for="od-date">On-Duty Date:</label>
+            <input type="date" id="od-date" name="od-date" required>
+            
+            <label for="od-time-start">On-Duty Start Time:</label>
+            <input type="time" id="od-time-start" name="od-time-start" required>
+            
+            <label for="od-time-end">On-Duty End Time:</label>
+            <input type="time" id="od-time-end" name="od-time-end" required>
+            
+            <label for="od-reason">Reason for On-Duty:</label>
+            <textarea id="od-reason" name="od-reason" rows="6" required></textarea>
+            
+            <label for="manager-approval">Manager's Approval:</label>
+            <input type="text" id="manager-approval" name="manager-approval" readonly>
+            
+            <input type="submit" value="Submit On-Duty Request">
+        </form>
+    </div>
+</body>
+</html>

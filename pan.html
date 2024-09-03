@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAN Card Application Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #c48ad0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            background-color: rgb(205, 174, 207)F0;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        fieldset {
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: rgb(219, 137, 222);
+            color: white;
+            padding: 10px 0;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="submit"]:hover {
+            background-color: #8e8ee8;
+        }
+    </style>
+</head>
+<body>
+    <h2>PAN Card Application Form</h2>
+    <div class="form-container">
+        <form action="/submit_pan-card" method="post">
+           
+                <legend>Personal Information</legend>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+                
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+                
+                <label for="father-name">Father's Name:</label>
+                <input type="text" id="father-name" name="father-name" required>
+                
+                <label for="mother-name">Mother's Name:</label>
+                <input type="text" id="mother-name" name="mother-name" required>
+                
+                <label for="gender">Gender:</label>
+                <input type="radio" id="male" name="gender" value="male" required> Male
+                <input type="radio" id="female" name="gender" value="female" required> Female
+                <input type="radio" id="other" name="gender" value="other" required> Other
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="address">Residential Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            
+            
+            
+                <legend>Identification Details</legend>
+                <label for="aadhaar-number">Aadhaar Number:</label>
+                <input type="text" id="aadhaar-number" name="aadhaar-number" required>
+                
+                <label for="voter-id">Voter ID Number:</label>
+                <input type="text" id="voter-id" name="voter-id">
+                
+                <label for="passport-number">Passport Number:</label>
+                <input type="text" id="passport-number" name="passport-number">
+            
+            
+            
+                <legend>Declaration</legend>
+                <input type="checkbox" id="declaration" name="declaration" required>
+                <label for="declaration">I hereby declare that the information provided is true and correct to the best of my knowledge.</label>
+           
+            
+            <input type="submit" value="Submit Application">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdrawal Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #c6e4dd;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #87ccae;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #8ad9c0;
+            color: white;
+            padding: 10px 0;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="submit"]:hover {
+            background-color: #d7b5a9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Withdrawal Form</h1>
+    <div class="form-container">
+        <form action="/submit-withdrawal" method="post">
+           
+                <legend>Personal Information</legend>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="account-number">Account Number:</label>
+                <input type="text" id="account-number" name="account-number" required>
+            
+            
+            
+                <legend>Withdrawal Details</legend>
+                <label for="withdrawal-amount">Withdrawal Amount:</label>
+                <input type="number" id="withdrawal-amount" name="withdrawal-amount" required>
+                
+                <label for="withdrawal-method">Withdrawal Method:</label>
+                <select id="withdrawal-method" name="withdrawal-method" required>
+                    <option value="cash">Cash</option>
+                    <option value="check">Check</option>
+                    <option value="bank-transfer">Bank Transfer</option>
+                    <option value="other">Other</option>
+                </select>
+                
+                <label for="withdrawal-date">Withdrawal Date:</label>
+                <input type="date" id="withdrawal-date" name="withdrawal-date" required>
+                
+                <label for="reference-number">Reference Number:</label>
+                <input type="text" id="reference-number" name="reference-number">
+            
+            
+            
+                <legend>Remarks</legend>
+                <label for="remarks">Remarks (Optional):</label>
+                <textarea id="remarks" name="remarks" rows="4"></textarea>
+            
+            
+            <input type="submit" value="Submit Withdrawal">
+        </form>
+    </div>
+</body>
+</html>

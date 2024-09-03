@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #d2ebe9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #7fd5d1;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #7dcfce;
+            color: white;
+            padding: 10px 0;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="submit"]:hover {
+            background-color: #d28a95;
+        }
+    </style>
+</head>
+<body>
+    <h1>Transaction Form</h1>
+    <div class="form-container">
+        <form action="/submit-transaction" method="post">
+            
+                <legend>Personal Information</legend>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="account-number">Account Number:</label>
+                <input type="text" id="account-number" name="account-number" required>
+            
+            
+            
+                <legend>Transaction Details</legend>
+                <label for="transaction-type">Transaction Type:</label>
+                <select id="transaction-type" name="transaction-type" required>
+                    <option value="deposit">Deposit</option>
+                    <option value="withdrawal">Withdrawal</option>
+                    <option value="transfer">Transfer</option>
+                </select>
+                
+                <label for="transaction-amount">Transaction Amount:</label>
+                <input type="number" id="transaction-amount" name="transaction-amount" required>
+                
+                <label for="transaction-date">Transaction Date:</label>
+                <input type="date" id="transaction-date" name="transaction-date" required>
+                
+                <label for="reference-number">Reference Number:</label>
+                <input type="text" id="reference-number" name="reference-number">
+            
+            
+            
+                <legend>Remarks</legend>
+                <label for="remarks">Remarks (Optional):</label>
+                <textarea id="remarks" name="remarks" rows="4"></textarea>
+            
+            
+            <input type="submit" value="Submit Transaction">
+        </form>
+    </div>
+</body>
+</html>

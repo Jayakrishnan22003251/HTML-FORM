@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Application Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9e6d5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #dfda4f;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color:#dfda4f;
+            color: white;
+            padding: 10px 0;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="submit"]:hover {
+            background-color: #b28869;
+        }
+    </style>
+</head>
+<body>
+    <h1>Leave Application Form</h1>
+    <div class="form-container">
+        <form action="/submit_leave-application" method="post">
+            
+                <legend>Personal Information</legend><br>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="department">Department:</label>
+                <input type="text" id="department" name="department" required>
+                
+                <label for="position">Position:</label>
+                <input type="text" id="position" name="position" required>
+                
+                <label for="manager">Manager/Supervisor Name:</label>
+                <input type="text" id="manager" name="manager" required>
+            
+            
+            
+                <legend>Leave Details</legend><br>
+                <label for="leave-type">Type of Leave:</label>
+                <select id="leave-type" name="leave-type" required>
+                    <option value="sick">Sick Leave</option>
+                    <option value="vacation">Vacation Leave</option>
+                    <option value="personal">Personal Leave</option>
+                    <option value="maternity">Maternity/Paternity Leave</option>
+                    <option value="other">Other</option>
+                </select>
+                
+                <label for="leave-start-date">Start Date:</label>
+                <input type="date" id="leave-start-date" name="leave-start-date" required>
+                
+                <label for="leave-end-date">End Date:</label>
+                <input type="date" id="leave-end-date" name="leave-end-date" required>
+                
+                <label for="leave-reason">Reason for Leave:</label>
+                <textarea id="leave-reason" name="leave-reason" rows="6" required></textarea>
+            
+            
+            
+                <legend>Contact During Leave</legend><br>
+                <label for="leave-contact">Contact Information During Leave (if different):</label>
+                <textarea id="leave-contact" name="leave-contact" rows="4"></textarea>
+            
+            
+            
+                <legend>Approval</legend>
+                <label for="manager-approval">Manager's Approval:</label>
+                <input type="text" id="manager-approval" name="manager-approval" readonly>
+            
+            
+            <input type="submit" value="Submit Leave Application">
+        </form>
+    </div>
+</body>
+</html>
